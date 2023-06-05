@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about-styles.css"/>
+   <!-- bootsrap icon link -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Hike Horizon</title>
+</head>
+<body>
+  <!-- Top section of page containing logo and navigation -->
+  <!-- Logo -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-white.png" alt="Hike Horizon Logo">
+      </a>
+    </div>    
+    <!-- Navigation menu -->
+
+    <!-- Beside topnav is a class name "open" which is not visible here because of the javascript but still in there: try to inspect in the browser -->
+    <nav class="topnav ">
+      <ul class="menu-list resize-animation-stopper">
+        <li><a href="index.html">home</a></li>
+        <!-- <li><a href="about.html">about</a></li> -->
+        <li><a href="checklist.html">checklist</a></li>
+        <li><a href="search.html">search</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      
+      <!-- The Bootstrap icons -->
+      <button>
+        <i class="bi bi-x-circle-fill"></i> <!-- Close/Exit Icon -->
+        <i class="bi bi-list"></i> <!-- Hamburger Menu Icon -->
+      </button>
+
+    </nav>
+  </header>
+     <!-- Middle of page containing content & button-->
+  <main class="home-content">
+    <h1>WELCOME TO <span class="adventure">HIKE HORIZON</span></h1><br>
+      <p>Established in 2022 by a group of passionate hikers, we understand the thrill and joy that comes from immersing oneself in the great outdoors.  Our mission is to empower adventurers like you with the tools and resources you need to embark on unforgettable journeys, discover uncharted territories, and check off breathtaking vistas from your bucket list.</p><br> 
+
+        <p>At Hike Horizon, we believe that planning for your outdoor escapades should be as effortless as the adventures themselves. That's why we have curated a range of comprehensive gear checklists tailored to your specific outdoor pursuits. Whether you're a seasoned hiker or a beginner, our checklists ensure you have all the essential gear and equipment needed for a safe and enjoyable experience. From backpacks and tents to hiking boots and navigation tools, we've got you covered.</p><br>
+        
+        <p>In addition to our gear checklists, we offer a powerful search feature that allows you to easily find hiking trails and campsites near your location. With just a few clicks, you can discover hidden gems in your area or explore new destinations far beyond. Our search feature provides detailed information about each trail or campsite, including difficulty level, distance, elevation, and user reviews, giving you the confidence to choose the perfect adventure for your preferences.</p><br>
+        
+        <p>But we're more than just a website with checklists and search functionality. We are a community of outdoor enthusiasts who share a common love for nature and exploration. Through our blog, we share inspiring stories, expert tips, and practical advice to fuel your wanderlust and deepen your connection with the natural world. Whether you're looking for the best hiking trails in your region, tips on wilderness survival, or insights into sustainable camping practices, our blog is a valuable resource for every outdoor enthusiast.</p><br>
+        
+        <p>Join us at Hike Horizon and let us be your compass in the world of outdoor exploration. Together, we'll navigate the winding trails, summit majestic peaks, and create memories that will last a lifetime. Embark on a journey of self-discovery, connect with nature, and push your boundaries. The mountains are calling, and we're here to guide you in pursuit of new horizons. Welcome to Hike Horizon, where adventure begins!</p>
+    </p>
+    <button class="learn-more-btn" onclick="window.location.href='search.html';">Hit The Trails</button>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p class="footer-content">CS50 2023 - HTML, CSS, Javascript - Problem Set: Homepage</p>
+  </footer> 
+
+  <script src="navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+
+/* Style property for the Scrollbar */
+
+::-webkit-scrollbar {
+  width: 1em;
+  background: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: orange;
+  /* border-radius: 100px;
+  margin-block: .5em; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 100px;
+  border: .20em solid orange;
+}
+
+
+
+/* Styling for the whole page */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling for the body of the page with a full image background */
+body {
+  background: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(images/ropeclimb.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* min-height: 100vh; */
+  max-width: 100svw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Styling for header container for logo and navbar*/
+header {
+  display: flex;
+  position: relative;
+  padding: 10px 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+/* Styling for logo */
+.logo img {
+  float: left;
+  margin: 0;
+  padding: 0;
+  max-width: 90%;
+  height: auto;
+  width: 400px;
+  cursor: auto;
+  }
+
+
+/* Gives all the flexibility of the navbar list to be in the same length regardless of how the screen shrinks they will keep inline as a property mentioned in the ".menu-list li" */
+.topnav {
+  display: flex;
+}
+
+.menu-list {
+  display: flex;
+}
+/* Applies styling to the list items in the navigation menu */
+.menu-list li {
+  display: inline-block;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+ 
+  }
+
+/* Applies styling to the links in the list items */
+.menu-list li a {
+  color: orange;
+  text-decoration: none;
+  position: relative;
+  font-size:  clamp(.80rem, 5vw, 1.5rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  }
+
+/* Ensures that the links appear orange whether visited or not */
+.menu-list li a:link {
+  color: orange;
+  }
+/* Sets the color of visited links to orange */  
+.menu-list li a:visited {
+  color: orange;
+}
+
+/* Sets the color of the links to white when the mouse hovers over them */
+.menu-list li a:hover {
+  color: white;
+}
+
+/* Adds a horizontal line under the links when the mouse hovers over them */
+.menu-list li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  }
+
+/* Scales the pseudo-element to a width of 100% when the mouse hovers over the link */
+.menu-list li a:hover:after {
+  transform: scaleX(1);
+}
+
+/* The hamburger and exit icon is set to not be visible or hidden to not be shown in the navbar  */
+.topnav button {
+  display: none;
+}
+
+/* Sty,ling the contact cointainer */
+#last {
+  display: block;
+  position: relative;
+  margin-inline: min(10%);
+  margin: 0 auto; /* centering the form */
+  /* border: 2px solid orange; */
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 149, 0, 0.32);
+  margin-top: min(5%);
+  margin-bottom: min(10%);
+  box-shadow: 10px 5px 10px 5px rgba(0,0,0,.35) ;
+  max-width: 900px; /* however the screen is stretched it will only display until 900px width */
+  /* margin-bottom: min(10%); */
+  
+}
+/* .lt {
+  margin-inline: 50px;
+  border: 2px solid orange;
+  padding: 20px;
+  border-radius: 20px;
+} */
+
+#last h3 {
+  color: #fff;
+  font-size: clamp(1rem, 10vw, 2rem);  /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  font-weight: 600;
+  /* margin-left: min(1%); */
+}
+
+/* Stying the width of the Inputs and Textarea in exact width inside the container */
+.form-horizontal {
+  width: 50% ;
+  
+}
+
+/* Styling the measurement of the Input boxes */
+.form-control {
+  height: 10%;
+  width: 100%;
+}
+
+/* Styling the Input boxes and text area */
+.form-horizontal input[type="text"],
+.form-horizontal input[type="email"],
+.form-horizontal textarea {
+ margin-bottom: min(2%);
+ width: 200%;
+ outline: none;
+ border: 2px solid #fff;
+ border-radius: 10px;
+ background: rgba(0,0,0,0.50);
+ color: aliceblue;
+}
+
+
+/* Styling the flexibility of all items inside the main container and not overlapping */
+.full {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  margin: 0;
+}
+
+/* .lt {
+  margin: 0;
+} */
+
+
+.contact-list {
+  margin-right: 0;
+  
+}
+
+/* Styling the Contact Info list */
+.list-item {
+  list-style: none;
+  margin-bottom: min(20%);
+  background: orange;
+  padding: min(5px);
+  border-radius: 20px;
+  font-size:  clamp(.80rem, 3vh, .90rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value as the screen changing it size*/
+}
+
+/* Styling the contact info icons */
+.contact-list i {
+  color: #fff;
+  font-size: min(1.5rem);
+  /* margin-right: 5px; */
+  width: 50px;
+  text-align: center;
+}
+
+
+/* Styling the contact info lists */
+.contact-list span {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-list span a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Giving the right exact value of the contact info container's margin to be in the right place */
+.rt {
+  margin: auto;
+  margin-right: 0;
+}
+
+textarea
+{
+  padding: 10px;
+}
+
+
+/* #last {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.full {
+  width: 80%;
+  display: inline-block;
+  margin: 8% 2% 10%;
+  margin-left: 10%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.35);
+  color: white;
+  border: 15px solid rgb(255, 149, 0);
+  border-radius: 5px;
+  
+}
+
+.full h3 {
+  font-size: 2rem;
+  display: block;
+  margin: 2%;
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+
+.lt {
+  padding: 2%;
+  margin: 2%;
+} */
+/*
+.rt {
+  padding: 2%;
+  margin: 2%;
+  
+}*/
+
+/* .lt textarea {
+  width: 94%;
+  margin-left: 2.8%;
+} */
+
+/* button {
+  margin: 2%;
+} */
+
+/* Styling the Send Button */
+.btn-primary {
+  background-color: orange;
+  /* border: 2px solid white; */
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bolder;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+  color: orange;
+  background-color: white;
+}
+
+.btn-primary:visited {
+  color: white;
+  background-color: orange;
+}
+
+/*
+.list-item {
+  margin-bottom: 2%;
+  list-style-type: none;
+}
+
+.list-item span {
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+
+.list-item a {
+  color: white;
+  display: inline-block;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}*/
+
+/* .form-control {
+  background-color: rgba(0,0,0,0.35);
+} */
+
+/* @media screen and (min-width: 770px) {
+  .full {
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .lt textarea {
+    width: 95%;
+    margin-left: 2.4%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .full {
+    width: 65%;
+    margin-left: 17%;
+    margin-top: 5%;
+  }
+
+  .lt {
+    width: 55%;
+    display: block;
+    float: left;
+    margin-right: 0;
+  }
+
+  .rt {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin: 150px 20px;
+  }
+
+  .contact-list li {
+    list-style: none;
+  }
+
+  .contact-list li i {
+    display: flex;
+   position: relative;
+   line-height: 50px;
+  }
+
+  .contact-text {
+    display: flex;
+    float: right;
+    justify-content: flex-end;
+    padding-left: 20px;
+  } */
+
+  /*.rt {
+    width: 35%;
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  .list-item {
+    margin-bottom: 10%;
+  }
+
+  .contact-list {
+    margin-top: 22%;
+    padding-right: 8%;
+  }
+
+  .fa-envelope, .gmail {
+    display: inline-block;
+    width: auto;
+  }*/
+/* } */
+
+
+/* for responsive mobile  when maximum width from 1280px*/
+
+@media (max-width: 1000px) {
+
+  body{
+    padding: 0;
+    margin: 0;
+  }
+
+ /* Styling the navbar in 700px screen resolution */
+ header {
+  padding: 20px;
+  background:  rgba(0,0,0,0.50);
+}
+
+ /* A class element properties that preventing the hamburger menu to trigger when resizing */
+ .resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+  /* Resizing the image in fromm 700px screen resolution */
+  .logo img{
+    width: 25%;
+  }
+
+  /* When reach to 700px the hamburger/ist and exit button will be visible */
+  /* A new Navbar will appear */
+
+  /* css property for hamburger/list and exit button */
+  .topnav button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: orange;
+    font-size: 2rem;
+    z-index: 2;
+    outline: none;
+  }
+
+  /* the only icon that will appear in the home navbar will only the hamburger/list icon and the exit icon will not be shown */
+  .topnav i.bi-x-circle-fill,
+  .open i.bi-list {
+    display: none;
+  }
+
+  /* in this property the exit icon will appear on the new navbar  */
+  .open i.bi-x-circle-fill {
+    display: block;
+    position: fixed;
+    top: 40px;
+    animation: enter 0.8s; /* This will give a smooth enter when the exit icon will pop up */
+  }
+
+  /* a css property to make the animation take effect */
+  @keyframes enter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* a new style for the navbar list */
+  .menu-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,1);
+    height: 100%;
+    flex-direction: column;
+    padding-top: 80px;
+    z-index: 1; /* Wrapping to be in front of all items */
+    transform: translateX(100%); /* Repositioning the new navbar list in a horizontal direction - in this case this will not be visible as it moves to a 100 x-axis of the screen */
+    transition: transform .5s ease-in-out;
+    
+  }
+  .menu-list li {
+    font-size: 3rem;
+  }
+
+   /* This type of class element that will work only with javascript */
+  /* a class name "open" is a special class element that is declared under navbar.js */
+  .open .menu-list {
+    transform: translateX(0); /* Giving it a value of 0 in x-axis  - in this case this will be visible in  the screen where it should take place*/
+    
+  }
+
+  /* Giving the hamburger and exit icon a color property */
+  .open button {
+    color: orange;
+  }
+
+  /* Wrapping the Hamburger Menu list to be in front of all items when clicking the hamburger icon */ 
+  .topnav {
+    z-index: 1;
+  }
+
+  #last {
+    margin-inline: 90px; /* Setting the value for left and right margin */
+  }
+
+  /* Styling the contact info container to be at the center  */
+  .rt {
+    margin-left: min(2%);
+    margin-right: 0;
+    padding: 0;
+  }
+
+  /* Styling all the items to be in column or in exact order and not rambling  */
+  .full {
+    display: block;
+  }
+
+  /* Styling the all the list with a value or the bottom margin */
+  .list-item {
+    margin-bottom: min(2%);
+  }
+
+  /* Styling the Input boxes and text area to have an exact with and a 0 value of margin */
+  .form-control {
+    margin: 0;
+    width: 100%;
+  }
+
+  .rt::before,
+  #last h3::after {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 100;
+    height: 5px;
+    border-radius: 10px;
+    margin-bottom: min(5%);
+    margin-top: min(5%);
+  }
+
+  #last {
+    margin-block: min(10%); /* Setting the value for top and bottom margin */
+  }
+
+  #last h3 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /* setting all the contact info to be at the center  */
+  .rt {
+    padding: 0;
+    left: 0;
+    margin-inline: auto;
+  }
+
+  /* Setting a value to have a margin at the left side of the list */
+  .contact-text {
+    margin-left: min(35%)
+  }
+
+  footer {
+  
+    z-index: 1;
+
+  }
+
+
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  padding: min(5vw, 20px); /* Setting the smallest value from a list comma-separated function*/
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(.80, 10vh, 1rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  background: rgba(255, 149, 0, 0.54);
+  margin-bottom: 0;
+}
+

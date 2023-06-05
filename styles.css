@@ -1,0 +1,319 @@
+/* Styling for whole of the page. */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+/* Styling for body of the page w/ full image background */
+body {
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(images/home.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* height: 100vh; Set the height to 100vh */
+  min-height: 100svh; /* Set the min-height to 100vh */
+  /* width: 100%; Set the width to 100% */
+  padding-bottom: 0;
+}
+
+  
+/* Styling for header container for logo and navbar*/
+header {
+  display: flex;
+  position: relative;
+  padding: 10px 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+/* Styling for logo */
+.logo img {
+  float: left;
+  margin: 0;
+  padding: 0;
+  max-width: 90%;
+  height: auto;
+  width: 400px;
+  cursor: auto;
+  }
+
+
+
+/* Gives all the flexibility of the navbar list to be in the same length regardless of how the screen shrinks they will keep inline as a property mentioned in the ".menu-list li" */
+.topnav {
+  display: flex;
+}
+
+.menu-list {
+  display: flex;
+}
+/* Applies styling to the list items in the navigation menu */
+.menu-list li {
+  display: inline-block;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+ 
+  }
+
+/* Applies styling to the links in the list items */
+.menu-list li a {
+  color: orange;
+  text-decoration: none;
+  position: relative;
+  font-size:  clamp(.80rem, 5vw, 1.5rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  
+  }
+
+/* Ensures that the links appear orange whether visited or not */
+.menu-list li a:link {
+  color: orange;
+  }
+/* Sets the color of visited links to orange */  
+.menu-list li a:visited {
+  color: orange;
+}
+
+/* Sets the color of the links to white when the mouse hovers over them */
+.menu-list li a:hover {
+  color: white;
+}
+
+/* Adds a horizontal line under the links when the mouse hovers over them */
+.menu-list li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  }
+
+/* Scales the pseudo-element to a width of 100% when the mouse hovers over the link */
+.menu-list li a:hover:after {
+  transform: scaleX(1);
+}
+
+/* The hamburger and exit icon is set to not be visible or hidden to not be shown in the navbar  */
+.topnav button {
+  display: none;
+}
+
+/* Styling for the content section of the homepage */
+.home-content {
+  /* margin: 70px 0 0 90px;
+  line-height: 60px; */
+  margin-inline: 90px; /* Setting a value for left and right margin; */
+  margin-top: min(5%);
+  
+  }
+
+.home-content h1 {
+  font-size: clamp(1rem, 10vw, 4rem);  /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  color: white;
+}
+
+span.adventure {
+  font-size: clamp(1rem, 10vw, 4rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value as the screen changing it size*/
+  color: orange;
+}
+
+
+/* Styling the home  paragraph, giving it an own class*/
+.content-paragraph {
+  color: white;
+  line-height: 150%;
+  
+}
+
+
+/* A class styling the first paragraph */
+.first {
+  font-size: clamp(.80rem, 3vh, 4rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value as the screen changing it size*/
+  margin-block: 20px;
+}
+
+/* A class styling the second paragraph */
+.second {
+  font-size:  clamp(.80rem, 3vh, 4rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value as the screen changing it size*/
+  text-align: justify;
+}
+
+
+.learn-more-btn {
+  text-decoration: none;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  margin-block: 30px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+  border: none; /* Optional - to remove default button border */
+  cursor: pointer; /* Optional - to indicate clickable button */
+}
+
+
+.learn-more-btn:hover {
+  color: orange;
+  background-color: white;
+}
+.learn-more-btn:visited {
+  color: white;
+  background-color: orange;
+}
+
+/* .topnav li.menu-icon  {
+  background: none;
+  border-style: none;
+  color: orange;
+ 
+} */
+
+
+/* for responsive mobile  when maximum width decrease to 700px*/
+@media (max-width: 850px) {
+  body{
+    padding: 0;
+    margin: 0;
+  }
+
+ /* Styling the navbar in 700px screen resolution */
+ header {
+  padding: 20px;
+  background: rgba(0,0,0,.50) ;
+}
+  /* Resizing the image in fromm 700px screen resolution */
+  .logo img{
+    width: 40%;
+  }
+
+  /* A class element properties that preventing the hamburger menu to trigger when resizing */
+  .resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* When reach to 700px the hamburger/ist and exit button will be visible */
+
+  /* A new Navbar will appear */
+
+  /* css property for hamburger/list and exit button */
+  .topnav button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: orange;
+    font-size: 2rem;
+    z-index: 2;
+    outline: none;
+  }
+
+  .topnav i.bi-x-circle-fill,
+  .open i.bi-list {
+    display: none;
+  }
+
+  /* in this property the exit icon will appear on the new navbar  */
+  .open i.bi-x-circle-fill {
+    display: block;
+    animation: enter 0.8s; /* This will give a smooth enter when the exit icon will pop up */
+  }
+
+  /* a css property to make the animation take effect */
+  @keyframes enter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* a new style for the navbar list */
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,1);
+    height: 100%;
+    flex-direction: column;
+    padding-top: 80px;
+    z-index: 1; /* Wrapping to be in front of all items */
+    transform: translateX(100%); /* Repositioning the new navbar list in a horizontal direction - in this case this will not be visible as it moves to a 100 x-axis of the screen */
+    transition: transform .5s ease;
+  }
+  .menu-list li {
+    font-size: 3rem;
+  }
+
+  /* This type of class element that will work only with javascript */
+  /* a class name "open" is a special class element that is declared under navbar.js */
+
+  .open .menu-list {
+    transform: translateX(0);  /* Giving it a value of 0 in x-axis  - in this case this will be visible in  the screen where it should take place*/
+    
+  }
+
+  /* Giving the hamburger and exit icon a color property */
+  .open button {
+    color: orange;
+  }
+
+  .home-content {
+    flex-direction: column;  /* A property sets to place the contents in defining the main axis or direction in the flex container*/
+    margin-inline: 20px;  /* Giving a value of the left and right margin  */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    bottom: min(10%);
+  }
+
+  /* .home-content h1, .home-content p  {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+   
+  } */
+
+  .learn-more-btn  {
+    padding: 10px;
+  }
+
+}
+
+
+/* Styling for the footer section of the homepage */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  }
+
+.footer-content {
+  padding: min(5vw, 20px); /* Setting the smallest value from a list comma-separated function*/
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(.80, 10vh, 1rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  background: rgba(255,149,0,0.54); /* last value is opacity aka alpha channel*/
+ 
+}
+

@@ -1,0 +1,349 @@
+/* Styling for the whole page */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling for the body of the page with a full image background */
+body {
+  background: linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.40), rgba(0,0,0,0.80)), url(images/search.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+  width: auto;
+  padding-bottom: 0;
+  height: 100vh;
+  
+}
+
+/* Styling for header container for logo and navbar*/
+header {
+  display: flex;
+  position: relative;
+  padding: 10px 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+/* Styling for logo */
+.logo img {
+  float: left;
+  margin: 0;
+  padding: 0;
+  max-width: 90%;
+  height: auto;
+  width: 400px;
+  cursor: auto;
+  }
+
+
+/* Gives all the flexibility of the navbar list to be in the same length regardless of how the screen shrinks they will keep inline as a property mentioned in the ".menu-list li" */
+.topnav {
+  display: flex;
+}
+
+.menu-list {
+  display: flex;
+}
+/* Applies styling to the list items in the navigation menu */
+.menu-list li {
+  display: inline-block;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+ 
+  }
+
+/* Applies styling to the links in the list items */
+.menu-list li a {
+  color: orange;
+  text-decoration: none;
+  position: relative;
+  font-size:  clamp(.80rem, 5vw, 1.5rem);  /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  
+  }
+
+/* Ensures that the links appear orange whether visited or not */
+.menu-list li a:link {
+  color: orange;
+  }
+/* Sets the color of visited links to orange */  
+.menu-list li a:visited {
+  color: orange;
+}
+
+/* Sets the color of the links to white when the mouse hovers over them */
+.menu-list li a:hover {
+  color: white;
+}
+
+/* Adds a horizontal line under the links when the mouse hovers over them */
+.menu-list li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  }
+
+/* Scales the pseudo-element to a width of 100% when the mouse hovers over the link */
+.menu-list li a:hover:after {
+  transform: scaleX(1);
+}
+
+/* The hamburger and exit icon is set to not be visible or hidden to not be shown in the navbar  */
+.topnav button {
+  display: none;
+}
+
+/* Styling for the content section of the search page */
+.search-content h1 {
+  font-size: clamp(1rem, 10vw, 4rem);  /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  color: white;
+  text-align: center;
+  /* text-decoration: underline solid orange; */
+}
+
+/*  */
+.search-content {
+  margin-inline: 90px; /* Setting a value for left and right margin; */
+  margin-top: min(2%);
+}
+
+.search-content p {
+  font-size: clamp(.80rem, 3vh, 4rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value as the screen changing it size*/
+  line-height: 150%;
+  color: #ffff;
+  text-align: center;
+  margin-top: min(2%);
+  margin-inline: 40px; /* Setting a value for left and right margin; */
+}
+
+span.adventure {
+  color: orange;
+  /* text-decoration: underline solid white; */
+}
+
+
+/* Search bar styles */
+#search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 90px;
+  max-width: 800px;  /* however the screen is stretched it will only display until 900px width */
+  /* margin-bottom: min(10%); */
+  margin: 2% auto;  /* Centering the search bar by giving a value of top and bottom and automatic inline from left to right margin */
+}
+
+#location-input {
+  width: 100%;
+  min-height: 50px;
+  padding: 5px;
+  border: none;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  border-bottom: 2px solid orange;
+  border-radius: 50px;
+  font-size: 18px;
+  text-align: center;
+  transition: .5s ease-in-out;
+}
+
+#location-input:hover {
+  background: #ffff;
+}
+
+#search-button {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 100%; /* Make the button perfectly round */
+  background-color: orange;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-button:hover {
+  background-color: white;
+  color: orange;
+}
+
+
+/* Styling the bootstrap icon */
+#search-button i {
+  font-size: 1.5rem;
+}
+
+/* Styling the example place to search */
+.example {
+  margin-inline: 90px;
+  margin-top: min(1%);
+  text-align: center;
+  
+}
+.example p {
+  font-size: clamp(.80rem, 2.5vh, 2rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value as the screen changing it size*/
+  color: #ffff;
+}
+
+
+/* for responsive mobile  when maximum width from 990px*/
+
+@media (max-width: 990px) {
+  body{
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Styling the navbar in 700px screen resolution */
+  header {
+    padding: 20px;
+    background:  rgba(0,0,0,0.50);
+  }
+
+   /* A class element properties that preventing the hamburger menu to trigger when resizing */
+  .resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+
+  /* Resizing the image in fromm 700px screen resolution */
+  .logo img{
+    width: 25%;
+  }
+
+  /* When reach to 700px the hamburger/ist and exit button will be visible */
+  /* A new Navbar will appear */
+
+  /* css property for hamburger/list and exit button */
+  .topnav button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: orange;
+    font-size: 2rem;
+    z-index: 2;
+    outline: none;
+  }
+
+  /* the only icon that will appear in the home navbar will only the hamburger/list icon and the exit icon will not be shown */
+  .topnav i.bi-x-circle-fill,
+  .open i.bi-list {
+    display: none;
+  }
+
+  /* in this property the exit icon will appear on the new navbar  */
+  .open i.bi-x-circle-fill {
+    display: block;
+    animation: enter 0.8s; /* This will give a smooth enter when the exit icon will pop up */
+  }
+
+  /* a css property to make the animation take effect */
+  @keyframes enter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* a new style for the navbar list */
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,1);
+    height: 100%;
+    flex-direction: column;
+    padding-top: 80px;
+    z-index: 1; /* Wrapping to be in front of all items */
+    transform: translateX(100%); /* Repositioning the new navbar list in a horizontal direction - in this case this will not be visible as it moves to a 100 x-axis of the screen */
+    transition: transform .5s ease;
+  }
+  .menu-list li {
+    font-size: 3rem;
+  }
+
+
+   /* This type of class element that will work only with javascript */
+  /* a class name "open" is a special class element that is declared under navbar.js */
+  .open .menu-list {
+    transform: translateX(0); /* Giving it a value of 0 in x-axis  - in this case this will be visible in  the screen where it should take place*/
+  }
+
+  /* Giving the hamburger and exit icon a color property */
+  .open button {
+    color: orange;
+  }
+
+  .search-content {
+    margin-inline: 20px; /* Setting a value for left and right margin; */
+    margin-top: min(15%);
+  }
+  
+  
+  #search-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  #search-button i {
+    font-size: 1rem;
+  }
+
+  footer{
+
+    z-index: -1;
+  }
+
+  /* Targeting the size of the font to the smallest value for screen resolution under 1000px */
+  .search-content p{
+    font-size: min(1rem);
+  }
+  .example p {
+    font-size: min(.60rem);
+  }
+}
+
+
+/* Styling for the footer section of the homepage */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  }
+
+.footer-content {
+  padding: min(5vw, 20px); /* Setting the smallest value from a list comma-separated function*/
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(.80, 10vh, 1rem); /* The clamp function will take three parameters of font-size values, such as the minimum, preferred, and maximum value */
+  background: rgba(255,149,0,0.54); /* last value is opacity aka alpha channel*/
+}
+
+
