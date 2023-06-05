@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- bootsrap icon link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Hike Horizon</title>
+</head>
+<body>
+  <!-- Top section of page containing logo and navigation -->
+  <!-- Logo -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-white.png" alt="Hike Horizon Logo">
+      </a>
+    </div>    
+    <!-- Navigation menu -->
+
+    <!-- Beside topnav is a class name "open" which is not visible here because of the javascript but still in there: try to inspect in the browser -->
+    <nav class="topnav ">
+      <ul class="menu-list resize-animation-stopper">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="checklist.html">checklist</a></li>
+        <li><a href="search.html">search</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      
+      <!-- The Bootstrap icons -->
+      <button>
+        <i class="bi bi-x-circle-fill"></i> <!-- Close/Exit Icon -->
+        <i class="bi bi-list"></i> <!-- Hamburger Menu Icon -->
+      </button>
+
+    </nav>
+  </header>
+     <!-- Middle of page containing content & button-->
+  <main class="home-content">
+    <h1>FIND YOUR PATH TO <span class="adventure">ADVENTURE</span></h1>
+    <p class="content-paragraph first">Your ultimate destination for all things hiking, backpacking, and camping! 
+    <p class="content-paragraph second">From a search feature to help you find trails and campsites near you, to comprehensive gear checklists tailored to your specific outdoor pursuits, we strive to make your planning effortless!</p>
+    </p>
+    <button class="learn-more-btn" onclick="window.location.href='about.html';">Learn More</button>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p class="footer-content">CS50 2023 - HTML, CSS, Javascript - Problem Set: Homepage</p>
+  </footer> 
+
+  <!-- Link of the javascript for the hamburger menu  -->
+  <script src="navbar.js"></script>
+</body>
+</html>
